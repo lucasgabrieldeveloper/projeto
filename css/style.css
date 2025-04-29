@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* cores */
+:root {
+    --cor-principal: #0E3B40;
+    --cor-secundaria: #026873;
+    --cor-acao: #5BCCD9;
+    --cor-clara: #D1FAFF;
+    --cor-destaque: #9EF5FF;
+}
+
+/* estilizações do header */
+
+header{
+    background-color: var(--cor-principal);
+    height: 100px;
+}
+
+header h1{
+    width: auto;
+    height: 50px;
+    padding: 20px 0px 0px 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--cor-destaque);
+}
+
+header h1 {
+    transition: color 0.4s ease, transform 0.4s ease;
+    cursor: pointer;
+}
+
+header h1:hover {
+    color: var(--cor-acao); /* muda para o azulzinho claro */
+    transform: scale(1.05);
+}
+
+
+header nav{
+    padding: 35px 0px 0px 0px;
+}
+
+header, nav > ul{
+    display: flex;
+    gap: 170px;
+}
+
+header nav > ul{
+    gap: 120px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+header nav ul li:hover{
+    cursor: pointer;
+    color: #62efff;
+    transition: 0.1s;
+}
+
+header nav ul li {
+    color: var(--cor-destaque);
+}
+
+header nav ul li a:visited{
+    color: inherit;
+}
+
+.header-animado {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.header-animado.ativo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-acao); /* tipo o azulzinho #5BCCD9 */
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}

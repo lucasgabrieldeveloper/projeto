@@ -5,8 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Headset Store</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
 </head>
 <body>
-    
+    <header>
+        <h1 class="header-animado">Headset Store</h1>
+        <nav>
+            <ul>
+                <li><a class="header-animado" href="#hero">Início</a></li>
+                <li><a class="header-animado" href="#destaques">Destaques</a></li>
+                <li><a class="header-animado" href="#categoria">Categorias</a></li>
+                <li><a class="header-animado" href="#depoimentos">Depoimentos</a></li>
+                <li><a class="header-animado" href="#contact">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero_section" id="hero">
+            <h2 data-aos="fade-up">Ouça cada detalhe com clareza profissional</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Headset x100 - Qualidade sonora que transforma a sua experiência</p>
+            <button data-aos="zoom-in" data-aos-delay="400">comprar</button>
+            <img src="../imagens/imagem-topo.png" alt="imagem-topo" width="732" height="auto" data-aos="fade-up" data-aos-delay="600">
+        </section>
+        <section class="destaques" id="destaques">
+            <div>
+                <img src="../icones/fone-de-ouvido.png" alt="fone-de-ouvido">
+                <p>Áudio de Alta Definição</p>
+            </div>
+            <div>
+                <img src="../icones/microfone.png" alt="microfone">
+                <p>Microfone com Cancelamento de Ruído</p>
+            </div>
+            <div>
+                <img src="../icones/bateria-cheia.png" alt="bateria-cheia">
+                <p>Bateria de Longa Duração</p>
+            </div>
+        </section>
+        <section class="categoria" id="categoria">
+            <h2>Compre por categoria</h2>
+            <div class="card">
+                <img src="../imagens/imagem-card1.png" alt="Headset gamer de alto desempenho" width="175" height="auto">
+                <h3>Headsets Gamers</h3>
+                <p>Para uma experiência imersiva nos jogos</p>
+            </div>
+            <div class="card">
+                <img src="../imagens/imagem-card2.png" alt="Bateria de longa duração" width="175" height="auto">
+                <h3>Headsets Bluetooth</h3>
+                <p>Conveniência sem fio para uso diário</p>
+            </div>
+            <div class="card">
+                <img src="../imagens/imagem-card3.png" alt="Qualidade e profissionalismo" width="175" height="auto">
+                <h3>headsets profissionais</h3>
+                <p>Áudio de alta qualidade para trabalho e estúdio</p>
+            </div>
+        </section>
+        <section class="depoimentos" id="depoimentos">
+            <div class="container-img-texto">
+                <img src="../imagens/imagem-section-avaliacoes.png" alt="imagem-section-avaliacoes" width="575" height="auto">
+                <div class="texto">
+                    <div class="txt"><h2>Design confortável e ergonômico</h2></div>
+                    <div class="txt" id="caracteristica">
+                        <img src="../icones/jogar.png" alt="jogar">
+                        <p>Compatível com PC, PS5 e Xbox.</p>
+                    </div>
+                    <div class="txt" id="caracteristica">
+                        <img src="../icones/jogar.png" alt="jogar">
+                        <p>Controle de volume e mute direto no headset.</p>
+                    </div>
+                    <div class="txt" id="caracteristica">
+                        <img src="../icones/estrela.png" alt="estrela">
+                        <p>Perfeito para o dia a dia.</p>
+                    </div>
+                    <div class="txt" id="caracteristica">
+                        <ul>
+                            <li>
+                                <p>Carla Meireles</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-depoimentos">
+                <h3>Veja o que os nossos clientes dizem:</h3>
+                <div class="depoimentos-nomes">
+                    <div>
+                        <img src="../icones/estrela.png" alt="estrela">
+                        <strong><p>“É muito confortável e resistente.”</p></strong>
+                        <ul>
+                            <li>
+                                <p>Patrícia Mendes</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../icones/estrela.png" alt="estrela">
+                        <strong><p>“Muita qualidade e custo beneficio.”</p></strong>
+                        <ul>
+                            <li>
+                                <p>Gustavo Teixeira</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../icones/estrela.png" alt="estrela">
+                        <strong><p>“Uso no home office e nos jogos.”</p></strong>
+                        <ul>
+                            <li>
+                                <p>Paulo Victor</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="contato">
+            <h2>Entre em contato</h2>
+            <ul>
+                <li>
+                    <p>headset.store@gmail.com</p>
+                </li>
+            </ul>
+            <form>
+                <input type="text" placeholder="Mensagem">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="local-redes">
+            <address>
+                Rua Carvalho, 123 - São Luís, MA
+            </address>
+            <div class="social-media">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+    window.addEventListener('load', () => {
+    const elementos = document.querySelectorAll('.header-animado');
+        elementos.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add('ativo');
+        }, index * 200); // delay entre os elementos
+        });
+    });
+</script>
+
+
 </body>
 </html>
