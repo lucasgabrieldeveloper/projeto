@@ -139,7 +139,32 @@ section.hero_section .texto-topo h2{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 48px;
+    font-size: 49px;
     width: 300px;
     color: var(--cor-clara);
+}
+
+section.hero_section .texto-topo p{
+    width: 300px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--cor-clara);
+    margin: 20px 0px;
+}
+
+section.hero_section .texto-topo button{
+    width: 108px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--cor-acao);
+    border: none;
+}
+
+section.hero_section .texto-topo button a{
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
