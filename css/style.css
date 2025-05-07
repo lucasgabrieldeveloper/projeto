@@ -5,6 +5,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 /* reset */
 * {
     margin: 0;
@@ -167,4 +169,104 @@ section.hero_section .texto-topo button a{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
+}
+
+section.destaques{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--cor-secundaria);
+    align-items: center;
+}
+
+section.destaques div{
+    width: 220px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.destaques div img{
+    width: 42px;
+}
+
+section.destaques div p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--cor-clara);
+}
+
+section.categoria{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #0E3B40, #026873);
+}
+
+section.categoria h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: var(--cor-destaque);
+    margin: 35px 0px;
+}
+
+section.categoria .container-cards{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 125px;
+}
+
+section.categoria .container-cards .card{
+    width: 230px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #026873, #0E3B40);
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.categoria .container-cards .card h3{
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--cor-acao);
+    margin-bottom: 15px;
+}
+
+section.categoria .container-cards .card p{
+    width: 200px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: var(--cor-clara);
+    text-align: center;
+}
+
+section.categoria .container-cards .card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
+}
+
+section.categoria .container-cards .card-animado{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+section.categoria .container-cards .card-animado.ativo{
+    opacity: 1;
+    transform: translateX(0);
 }

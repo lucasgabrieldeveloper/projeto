@@ -32,34 +32,36 @@
         </section>
         <section class="destaques" id="destaques">
             <div>
-                <img src="../icones/fone-de-ouvido.png" alt="fone-de-ouvido">
-                <p>Áudio de Alta Definição</p>
+                <img data-aos="fade-up" src="../icones/fone-de-ouvido.png" alt="fone-de-ouvido">
+                <p data-aos="fade-up">Áudio de Alta<br> Definição</p>
             </div>
             <div>
-                <img src="../icones/microfone.png" alt="microfone">
-                <p>Microfone com Cancelamento de Ruído</p>
+                <img data-aos="fade-up" src="../icones/microfone.png" alt="microfone">
+                <p data-aos="fade-up">Microfone com Cancelamento de Ruído</p>
             </div>
             <div>
-                <img src="../icones/bateria-cheia.png" alt="bateria-cheia">
-                <p>Bateria de Longa Duração</p>
+                <img data-aos="fade-up" src="../icones/bateria-cheia.png" alt="bateria-cheia">
+                <p data-aos="fade-up">Bateria de Longa Duração</p>
             </div>
         </section>
         <section class="categoria" id="categoria">
             <h2>Compre por categoria</h2>
-            <div class="card">
-                <img src="../imagens/imagem-card1.png" alt="Headset gamer de alto desempenho" width="175" height="auto">
-                <h3>Headsets Gamers</h3>
-                <p>Para uma experiência imersiva nos jogos</p>
-            </div>
-            <div class="card">
-                <img src="../imagens/imagem-card2.png" alt="Bateria de longa duração" width="175" height="auto">
-                <h3>Headsets Bluetooth</h3>
-                <p>Conveniência sem fio para uso diário</p>
-            </div>
-            <div class="card">
-                <img src="../imagens/imagem-card3.png" alt="Qualidade e profissionalismo" width="175" height="auto">
-                <h3>headsets profissionais</h3>
-                <p>Áudio de alta qualidade para trabalho e estúdio</p>
+            <div class="container-cards">
+                <div class="card card-animado">
+                    <img src="../imagens/imagem-card1.png" alt="Headset gamer de alto desempenho" width="175" height="auto">
+                    <h3>Headsets Gamers</h3>
+                    <p>Para uma experiência imersiva nos jogos</p>
+                </div>
+                <div class="card card-animado">
+                    <img src="../imagens/imagem-card2.png" alt="Bateria de longa duração" width="175" height="auto">
+                    <h3>Headsets Bluetooth</h3>
+                    <p>Conveniência sem fio para uso diário</p>
+                </div>
+                <div class="card card-animado">
+                    <img src="../imagens/imagem-card3.png" alt="Qualidade e profissionalismo" width="175" height="auto">
+                    <h3>headsets profissionais</h3>
+                    <p>Áudio de alta qualidade para trabalho e estúdio</p>
+                </div>
             </div>
         </section>
         <section class="depoimentos" id="depoimentos">
@@ -158,6 +160,27 @@
         }, index * 200); // delay entre os elementos
         });
     });
+</script>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+          // Adiciona a classe com delay (efeito onda)
+                setTimeout(() => {
+                entry.target.classList.add('ativo');
+          }, index * 200);
+        } else {
+            // Remove a classe quando sair da tela (pra animar de novo)
+            entry.target.classList.remove('ativo');
+        }
+    });
+    }, {
+        threshold: 0.1, // ativa com 10% visível
+    });
+
+    const cards = document.querySelectorAll('.card-animado');
+    cards.forEach((card) => observer.observe(card));
 </script>
 
 
