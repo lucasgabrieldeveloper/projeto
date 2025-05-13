@@ -1,20 +1,28 @@
 @charset "UTF-8";
 
-/* fontes */
+/* =========================== */
+/*         FONTES             */
+/* =========================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-/* reset */
+
+/* =========================== */
+/*         RESET              */
+/* =========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* cores */
+
+/* =========================== */
+/*     VARIÁVEIS DE COR       */
+/* =========================== */
 :root {
     --cor-principal: #0E3B40;
     --cor-secundaria: #026873;
@@ -23,71 +31,77 @@
     --cor-destaque: #9EF5FF;
 }
 
-/* estilizações do header */
 
-header{
+/* =========================== */
+/*          HEADER            */
+/* =========================== */
+header {
     background-color: var(--cor-principal);
     height: 100px;
 }
 
-header h1{
+/* Estilo do título */
+header h1 {
     width: auto;
     height: 50px;
     padding: 20px 0px 0px 25px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
     color: var(--cor-destaque);
-}
-
-header h1 {
     transition: color 0.4s ease, transform 0.4s ease;
     cursor: pointer;
 }
 
+/* Efeito hover no título */
 header h1:hover {
-    color: var(--cor-acao); /* muda para o azulzinho claro */
+    color: var(--cor-acao);
     transform: scale(1.05);
 }
 
-
-header nav{
+/* Estilo da navegação */
+header nav {
     padding: 35px 0px 0px 0px;
 }
 
-header, nav > ul{
+/* Alinhamento horizontal do header e nav */
+header, nav > ul {
     display: flex;
     gap: 170px;
 }
 
-header nav > ul{
+/* Estilo da lista de links */
+header nav > ul {
     gap: 120px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-header nav ul li a{
+/* Estilo dos links */
+header nav ul li a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    font-style: normal;
 }
 
-header nav ul li:hover{
+/* Hover nos itens da lista */
+header nav ul li:hover {
     cursor: pointer;
     color: #62efff;
     transition: 0.1s;
 }
 
+/* Cor padrão dos itens */
 header nav ul li {
     color: var(--cor-destaque);
 }
 
-header nav ul li a:visited{
+/* Corrige cor ao visitar link */
+header nav ul li a:visited {
     color: inherit;
 }
 
+/* Animação do header com JavaScript */
 .header-animado {
     opacity: 0;
     transform: translateX(-50px);
@@ -99,6 +113,7 @@ header nav ul li a:visited{
     transform: translateX(0);
 }
 
+/* Animação com underline no hover */
 nav a {
     position: relative;
     display: inline-block;
@@ -114,7 +129,7 @@ nav a::after {
     bottom: 0;
     width: 0%;
     height: 2px;
-    background-color: var(--cor-acao); /* tipo o azulzinho #5BCCD9 */
+    background-color: var(--cor-acao);
     transition: width 0.4s ease;
 }
 
@@ -122,40 +137,40 @@ nav a:hover::after {
     width: 100%;
 }
 
-section.hero_section{
+
+/* =========================== */
+/*        HERO SECTION        */
+/* =========================== */
+section.hero_section {
     width: 100%;
     height: 524px;
     background-color: var(--cor-principal);
     display: flex;
-
 }
 
-section.hero_section .texto-topo{
+section.hero_section .texto-topo {
     width: 50%;
     height: 100%;
     padding-left: 150px;
     padding-top: 90px;
 }
 
-section.hero_section .texto-topo h2{
+section.hero_section .texto-topo h2 {
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 49px;
     width: 300px;
     color: var(--cor-clara);
 }
 
-section.hero_section .texto-topo p{
+section.hero_section .texto-topo p {
     width: 300px;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    font-style: normal;
     color: var(--cor-clara);
     margin: 20px 0px;
 }
 
-section.hero_section .texto-topo button{
+section.hero_section .texto-topo button {
     width: 108px;
     height: 40px;
     border-radius: 50px;
@@ -163,15 +178,18 @@ section.hero_section .texto-topo button{
     border: none;
 }
 
-section.hero_section .texto-topo button a{
+section.hero_section .texto-topo button a {
     text-decoration: none;
     color: var(--cor-principal);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-style: normal;
 }
 
-section.destaques{
+
+/* =========================== */
+/*        DESTAQUES           */
+/* =========================== */
+section.destaques {
     width: 100%;
     height: 60px;
     display: flex;
@@ -180,7 +198,7 @@ section.destaques{
     align-items: center;
 }
 
-section.destaques div{
+section.destaques div {
     width: 220px;
     height: 60px;
     display: flex;
@@ -188,19 +206,22 @@ section.destaques div{
     gap: 1rem;
 }
 
-section.destaques div img{
+section.destaques div img {
     width: 42px;
 }
 
-section.destaques div p{
+section.destaques div p {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
     font-size: 13px;
     color: var(--cor-clara);
 }
 
-section.categoria{
+
+/* =========================== */
+/*        CATEGORIAS          */
+/* =========================== */
+section.categoria {
     width: 100%;
     height: 550px;
     display: flex;
@@ -209,23 +230,19 @@ section.categoria{
     background: linear-gradient(to bottom, #0E3B40, #026873);
 }
 
-section.categoria h2{
+section.categoria h2 {
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 40px;
     color: var(--cor-destaque);
     margin: 35px 0px;
 }
 
-section.categoria .container-cards{
-    width: auto;
-    height: auto;
+section.categoria .container-cards {
     display: flex;
     gap: 125px;
 }
 
-section.categoria .container-cards .card{
+section.categoria .container-cards .card {
     width: 230px;
     height: 300px;
     display: flex;
@@ -237,36 +254,102 @@ section.categoria .container-cards .card{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section.categoria .container-cards .card h3{
+section.categoria .container-cards .card h3 {
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
-    font-style: normal;
     color: var(--cor-acao);
     margin-bottom: 15px;
 }
 
-section.categoria .container-cards .card p{
+section.categoria .container-cards .card p {
     width: 200px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
     font-size: 15px;
     color: var(--cor-clara);
     text-align: center;
 }
 
-section.categoria .container-cards .card:hover{
+/* Efeito hover nos cards */
+section.categoria .container-cards .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
 }
 
-section.categoria .container-cards .card-animado{
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.8s ease;
+/* =========================== */
+/*  AVALIAÇÔES E DEPOIMENTOS   */
+/* =========================== */
+section.depoimentos{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #0E3B40, #026873);
 }
 
-section.categoria .container-cards .card-animado.ativo{
-    opacity: 1;
-    transform: translateX(0);
+section.depoimentos .container-img-texto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
 }
+
+/* Efeito hover na imagem do headset */
+section.depoimentos .container-img-texto .headset-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px; /* opcional: cantos arredondados */
+}
+
+section.depoimentos .container-img-texto .headset-img:hover {
+    transform: scale(1.05); /* zoom leve */
+}
+
+section.depoimentos .container-img-texto .texto .txt h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--cor-destaque);
+    width: 330px;
+    margin-bottom: 20px;
+}
+
+section.depoimentos .container-img-texto .texto .txt{
+    display: flex;
+    align-items: center;  /* centraliza verticalmente */
+    gap: 0.5rem;
+}
+
+section.depoimentos .container-img-texto .texto #caracteristica{
+    display: flex;
+    flex-direction: row;
+}
+
+section.depoimentos .container-img-texto .texto #caracteristica p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: var(--cor-clara);
+    margin-bottom: 10px;
+}
+
+section.depoimentos .container-img-texto .texto #caracteristica #negrito{
+    font-weight: 600;
+}
+
+section.depoimentos .container-img-texto .texto #caracteristica img{
+    margin-bottom: 10px;
+}
+
+section.depoimentos .container-img-texto .texto .estrela{
+    position: relative;
+}
+
+section.depoimentos .container-img-texto .texto .positon-absolute ul{
+    position: absolute;
+    margin-bottom: 50px;
+    margin-left: 15px;
+}
+
+section.depoimentos .container-img-texto .texto .positon-absolute ul li::marker{
+    font-size: 1.4rem;
+    color: var(--cor-clara);
+}
+

@@ -4,59 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Headset Store</title>
+    <!-- Link para o CSS da página -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
 </head>
 <body>
+
+    <!-- Cabeçalho com logo/título e navegação -->
     <header>
-        <h1 class="header-animado">Headset Store</h1>
+        <h1>Headset Store</h1>
         <nav>
             <ul>
-                <li><a class="header-animado" href="#hero">Início</a></li>
-                <li><a class="header-animado" href="#destaques">Destaques</a></li>
-                <li><a class="header-animado" href="#categoria">Categorias</a></li>
-                <li><a class="header-animado" href="#depoimentos">Depoimentos</a></li>
-                <li><a class="header-animado" href="#contact">Contatos</a></li>
+                <!-- Links para navegar pelas seções da página -->
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#categoria">Categorias</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contact">Contatos</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+        <!-- Seção principal (Hero) com destaque inicial do produto -->
         <section class="hero_section" id="hero">
             <div class="texto-topo">
-                <h2 data-aos="fade-up">Ouça cada detalhe com clareza profissional</h2>
-                <p data-aos="fade-up" data-aos-delay="200">Headset x100 - Qualidade sonora que transforma a sua experiência</p>
-                <button data-aos="zoom-in" data-aos-delay="400"><a href="#">comprar</a></button>
+                <h2>Ouça cada detalhe com clareza profissional</h2>
+                <p data-aos-delay="200">Headset x100 - Qualidade sonora que transforma a sua experiência</p>
+                <button><a href="#">comprar</a></button>
             </div>
-            <img src="../imagens/imagem-topo.png" alt="imagem-topo" data-aos="fade-up" data-aos-delay="600">
+            <img src="../imagens/imagem-topo.png" alt="imagem-topo">
         </section>
+
+        <!-- Seção de destaques com os principais benefícios -->
         <section class="destaques" id="destaques">
             <div>
-                <img data-aos="fade-up" src="../icones/fone-de-ouvido.png" alt="fone-de-ouvido">
-                <p data-aos="fade-up">Áudio de Alta<br> Definição</p>
+                <img src="../icones/fone-de-ouvido.png" alt="fone-de-ouvido">
+                <p>Áudio de Alta<br> Definição</p>
             </div>
             <div>
-                <img data-aos="fade-up" src="../icones/microfone.png" alt="microfone">
-                <p data-aos="fade-up">Microfone com Cancelamento de Ruído</p>
+                <img src="../icones/microfone.png" alt="microfone">
+                <p>Microfone com Cancelamento de Ruído</p>
             </div>
             <div>
-                <img data-aos="fade-up" src="../icones/bateria-cheia.png" alt="bateria-cheia">
-                <p data-aos="fade-up">Bateria de Longa Duração</p>
+                <img src="../icones/bateria-cheia.png" alt="bateria-cheia">
+                <p>Bateria de Longa Duração</p>
             </div>
         </section>
+
+        <!-- Seção de categorias com os três tipos de headsets -->
         <section class="categoria" id="categoria">
             <h2>Compre por categoria</h2>
             <div class="container-cards">
+                <!-- Card 1: Gamer -->
                 <div class="card card-animado">
                     <img src="../imagens/imagem-card1.png" alt="Headset gamer de alto desempenho" width="175" height="auto">
                     <h3>Headsets Gamers</h3>
                     <p>Para uma experiência imersiva nos jogos</p>
                 </div>
+                <!-- Card 2: Bluetooth -->
                 <div class="card card-animado">
                     <img src="../imagens/imagem-card2.png" alt="Bateria de longa duração" width="175" height="auto">
                     <h3>Headsets Bluetooth</h3>
                     <p>Conveniência sem fio para uso diário</p>
                 </div>
+                <!-- Card 3: Profissionais -->
                 <div class="card card-animado">
                     <img src="../imagens/imagem-card3.png" alt="Qualidade e profissionalismo" width="175" height="auto">
                     <h3>headsets profissionais</h3>
@@ -64,24 +75,31 @@
                 </div>
             </div>
         </section>
+
+        <!-- Seção com avaliações e depoimentos de clientes -->
         <section class="depoimentos" id="depoimentos">
             <div class="container-img-texto">
-                <img src="../imagens/imagem-section-avaliacoes.png" alt="imagem-section-avaliacoes" width="575" height="auto">
+                <!-- Imagem do produto + características -->
+                <img class="headset-img" src="../imagens/imagem-section-avaliacoes.png" alt="imagem-section-avaliacoes" width="500" height="auto">
                 <div class="texto">
                     <div class="txt"><h2>Design confortável e ergonômico</h2></div>
+
+                    <!-- Lista de características com ícones -->
                     <div class="txt" id="caracteristica">
-                        <img src="../icones/jogar.png" alt="jogar">
+                        <img src="../icones/jogar.png" alt="jogar" width="13" height="13">
                         <p>Compatível com PC, PS5 e Xbox.</p>
                     </div>
                     <div class="txt" id="caracteristica">
-                        <img src="../icones/jogar.png" alt="jogar">
+                        <img src="../icones/jogar.png" alt="jogar" width="13" height="13">
                         <p>Controle de volume e mute direto no headset.</p>
                     </div>
-                    <div class="txt" id="caracteristica">
-                        <img src="../icones/estrela.png" alt="estrela">
-                        <p>Perfeito para o dia a dia.</p>
+                    <div class="txt estrela" id="caracteristica">
+                        <img src="../icones/estrela.png" alt="estrela" width="110" height="110">
+                        <p id="negrito">Perfeito para o dia a dia.</p>
                     </div>
-                    <div class="txt" id="caracteristica">
+
+                    <!-- Nome do cliente que fez a avaliação -->
+                    <div class="txt positon-absolute" id="caracteristica">
                         <ul>
                             <li>
                                 <p>Carla Meireles</p>
@@ -90,9 +108,12 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Depoimentos adicionais em cards -->
             <div class="container-depoimentos">
                 <h3>Veja o que os nossos clientes dizem:</h3>
                 <div class="depoimentos-nomes">
+                    <!-- Depoimento 1 -->
                     <div>
                         <img src="../icones/estrela.png" alt="estrela">
                         <strong><p>“É muito confortável e resistente.”</p></strong>
@@ -102,6 +123,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- Depoimento 2 -->
                     <div>
                         <img src="../icones/estrela.png" alt="estrela">
                         <strong><p>“Muita qualidade e custo beneficio.”</p></strong>
@@ -111,6 +133,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- Depoimento 3 -->
                     <div>
                         <img src="../icones/estrela.png" alt="estrela">
                         <strong><p>“Uso no home office e nos jogos.”</p></strong>
@@ -124,19 +147,25 @@
             </div>
         </section>
     </main>
+
+    <!-- Rodapé com formulário de contato e redes sociais -->
     <footer id="contact">
         <div class="contato">
             <h2>Entre em contato</h2>
+            <!-- E-mail -->
             <ul>
                 <li>
                     <p>headset.store@gmail.com</p>
                 </li>
             </ul>
+            <!-- Formulário de mensagem -->
             <form>
                 <input type="text" placeholder="Mensagem">
                 <button type="submit">Enviar</button>
             </form>
         </div>
+
+        <!-- Endereço e redes sociais -->
         <div class="local-redes">
             <address>
                 Rua Carvalho, 123 - São Luís, MA
@@ -146,43 +175,5 @@
             </div>
         </div>
     </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-<script>
-    window.addEventListener('load', () => {
-    const elementos = document.querySelectorAll('.header-animado');
-        elementos.forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('ativo');
-        }, index * 200); // delay entre os elementos
-        });
-    });
-</script>
-
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-          // Adiciona a classe com delay (efeito onda)
-                setTimeout(() => {
-                entry.target.classList.add('ativo');
-          }, index * 200);
-        } else {
-            // Remove a classe quando sair da tela (pra animar de novo)
-            entry.target.classList.remove('ativo');
-        }
-    });
-    }, {
-        threshold: 0.1, // ativa com 10% visível
-    });
-
-    const cards = document.querySelectorAll('.card-animado');
-    cards.forEach((card) => observer.observe(card));
-</script>
-
-
 </body>
 </html>
