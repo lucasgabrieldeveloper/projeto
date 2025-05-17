@@ -36,8 +36,19 @@
 /*          HEADER            */
 /* =========================== */
 header {
-    background-color: var(--cor-principal);
     height: 100px;
+    background: rgba(14, 59, 64, 0.25); /* Cor #0E3B40 com transparência */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(14, 59, 64, 0.4);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: #fff;
+    box-sizing: border-box;
 }
 
 /* Estilo do título */
@@ -143,9 +154,10 @@ nav a:hover::after {
 /* =========================== */
 section.hero_section {
     width: 100%;
-    height: 524px;
+    min-height: 524px;
     background-color: var(--cor-principal);
-    display: flex;
+    display: flex;  
+    padding-top: 100px;
 }
 
 section.hero_section .texto-topo {
@@ -160,17 +172,23 @@ section.hero_section .texto-topo h2 {
     font-size: 49px;
     width: 300px;
     color: var(--cor-clara);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
 }
 
 section.hero_section .texto-topo p {
     width: 300px;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
+    font-size: 13px;
     color: var(--cor-clara);
     margin: 20px 0px;
 }
 
-section.hero_section .texto-topo button {
+section.hero_section .texto-topo a {
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
     width: 108px;
     height: 40px;
     border-radius: 50px;
@@ -178,7 +196,15 @@ section.hero_section .texto-topo button {
     border: none;
 }
 
-section.hero_section .texto-topo button a {
+section.hero_section .texto-topo a:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px var(--cor-acao);
+    background-color: #62efffd0;
+}
+
+section.hero_section .texto-topo a {
     text-decoration: none;
     color: var(--cor-principal);
     font-family: "Poppins", sans-serif;
@@ -213,7 +239,7 @@ section.destaques div img {
 section.destaques div p {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--cor-clara);
 }
 
@@ -223,7 +249,7 @@ section.destaques div p {
 /* =========================== */
 section.categoria {
     width: 100%;
-    height: 550px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,6 +261,8 @@ section.categoria h2 {
     font-size: 40px;
     color: var(--cor-destaque);
     margin: 35px 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
 }
 
 section.categoria .container-cards {
@@ -259,13 +287,15 @@ section.categoria .container-cards .card h3 {
     font-weight: 400;
     color: var(--cor-acao);
     margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+
 }
 
 section.categoria .container-cards .card p {
     width: 200px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 13px;
     color: var(--cor-clara);
     text-align: center;
 }
@@ -309,6 +339,7 @@ section.depoimentos .container-img-texto .texto .txt h2{
     color: var(--cor-destaque);
     width: 330px;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 section.depoimentos .container-img-texto .texto .txt{
@@ -325,7 +356,7 @@ section.depoimentos .container-img-texto .texto #caracteristica{
 section.depoimentos .container-img-texto .texto #caracteristica p{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--cor-clara);
     margin-bottom: 10px;
 }
@@ -346,20 +377,20 @@ section.depoimentos .container-img-texto .texto .estrela{
     position: relative;
 }
 
-section.depoimentos .container-img-texto .texto .positon-absolute ul{
+section.depoimentos .container-img-texto .texto .position-absolute ul{
     position: absolute;
     margin-bottom: 50px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
-section.depoimentos .container-img-texto .texto .positon-absolute ul li::marker{
+section.depoimentos .container-img-texto .texto .position-absolute ul li::marker{
     font-size: 1.4rem;
     color: var(--cor-clara);
 }
 
 section.depoimentos .container-depoimentos{
     width: 100%;
-    height: 250px;
+    height: 280px;
     background-color: var(--cor-secundaria);
     display: flex;
     flex-direction: column;
@@ -378,6 +409,7 @@ section.depoimentos .container-depoimentos .depoimentos-nomes{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 section.depoimentos .container-depoimentos .depoimentos-nomes div{
@@ -386,6 +418,12 @@ section.depoimentos .container-depoimentos .depoimentos-nomes div{
     align-items: center;
     width: 300px;
     height: 150px;
+    background: rgba(0, 118, 122, 0.13); /* fundo branco com transparência */
+    border-radius: 16px;
+    backdrop-filter: blur(10px); /* o efeito vidro mesmo! */
+    -webkit-backdrop-filter: blur(10px); /* compatibilidade */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* contorno suave */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* profundidade */
 }
 
 section.depoimentos .container-depoimentos .depoimentos-nomes div {
@@ -419,38 +457,43 @@ section.depoimentos .container-depoimentos .depoimentos-nomes div ul li::marker{
 /*           RODAPÉ            */
 /* =========================== */
 
-footer{
+footer {
+    /* Container geral do rodapé */
     width: 100%;
-    height: 450px;
+    min-height: 450px;
     background: linear-gradient(to bottom, #0E3B40, #02515a);
     display: flex;
     justify-content: center;
     gap: 25rem;
 }
 
-footer .contato, .local-redes{
+footer .contato, .local-redes {
+    /* Estilos das duas colunas do rodapé */
     width: 400px;
     height: 400px;
     margin-top: 50px;
 }
 
-footer .contato h2{
+footer .contato h2 {
+    /* Título da área de contato */
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 32px;
     color: var(--cor-clara);
 }
 
-footer .contato ul{
+footer .contato ul {
     margin-left: 16px;
 }
 
-footer .contato ul li::marker{
+footer .contato ul li::marker {
+    /* Estilo do marcador da lista */
     font-size: 1rem;
     color: var(--cor-clara);
 }
 
-footer .contato ul li p{
+footer .contato ul li p {
+    /* Texto do item de contato */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -458,7 +501,8 @@ footer .contato ul li p{
     margin: 30px 0px;
 }
 
-footer .contato form{
+footer .contato form {
+    /* Formulário de envio de mensagem */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -466,9 +510,10 @@ footer .contato form{
 }
 
 textarea.mensagem {
+    /* Caixa de texto da mensagem */
     height: 150px;
-    padding: 10px; /* adiciona espaço interno no topo */
-    resize: none;  /* opcional: impede redimensionamento */
+    padding: 10px;
+    resize: none;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     background-color: var(--cor-acao);
@@ -476,12 +521,13 @@ textarea.mensagem {
     border-radius: 10px;
 }
 
-textarea.mensagem::placeholder{
+textarea.mensagem::placeholder {
+    /* Estilo do placeholder da textarea */
     color: var(--cor-secundaria);
 }
 
-
-footer .contato form button{
+footer .contato form button {
+    /* Botão de enviar */
     height: 37px;
     border-radius: 10px;
     background-color: var(--cor-acao);
@@ -493,41 +539,48 @@ footer .contato form button{
 }
 
 footer .contato form button:hover {
-  transform: scale(1.05); /* dá uma leve aumentada */
+    /* Efeito hover do botão */
+    transform: scale(1.05);
 }
 
-footer .local-redes{
+footer .local-redes {
+    /* Coluna direita do rodapé (endereços + redes sociais) */
     display: flex;
     gap: 5rem;
     padding-top: 15px;
 }
 
-footer .local-redes h3{
+footer .local-redes h3 {
+    /* Subtítulo (opcional, se tiver) */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 19px;
     color: var(--cor-clara);
     margin-bottom: 10px;
-} 
+}
 
-footer .local-redes address{
+footer .local-redes address {
+    /* Endereço de localização */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: var(--cor-clara);
 }
 
-footer .local-redes .social-media .sociais{
+footer .local-redes .social-media .sociais {
+    /* Agrupamento dos ícones sociais */
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-footer .local-redes .social-media .sociais img{
+footer .local-redes .social-media .sociais img {
+    /* Ícones das redes sociais */
     border-radius: 5px;
 }
 
-footer .local-redes .social-media .sociais img:hover{
+footer .local-redes .social-media .sociais img:hover {
+    /* Efeito hover nos ícones sociais */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px var(--cor-acao);
     background-color: #62efffd0;
