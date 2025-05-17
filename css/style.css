@@ -289,17 +289,17 @@ section.depoimentos .container-img-texto{
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5rem;
 }
 
 /* Efeito hover na imagem do headset */
 section.depoimentos .container-img-texto .headset-img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-radius: 10px; /* opcional: cantos arredondados */
+    transition: transform 0.4s ease;
 }
 
 section.depoimentos .container-img-texto .headset-img:hover {
-    transform: scale(1.05); /* zoom leve */
+    transform: scale(1.08); /* zoom leve */
 }
 
 section.depoimentos .container-img-texto .texto .txt h2{
@@ -330,6 +330,10 @@ section.depoimentos .container-img-texto .texto #caracteristica p{
     margin-bottom: 10px;
 }
 
+section.depoimentos .container-img-texto .texto{
+    margin: 90px;
+}
+
 section.depoimentos .container-img-texto .texto #caracteristica #negrito{
     font-weight: 600;
 }
@@ -353,3 +357,179 @@ section.depoimentos .container-img-texto .texto .positon-absolute ul li::marker{
     color: var(--cor-clara);
 }
 
+section.depoimentos .container-depoimentos{
+    width: 100%;
+    height: 250px;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.depoimentos .container-depoimentos h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #6FE3F3;
+    margin: 10px 0px;
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes div {
+    transition: transform 0.4s ease;
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes div:hover {
+    transform: scale(1.05); /* zoom leve */
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes div p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cor-clara);
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes div ul li p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cor-clara);
+}
+
+section.depoimentos .container-depoimentos .depoimentos-nomes div ul li::marker{
+    font-size: 1.2rem;
+    color: var(--cor-clara);
+}
+
+/* =========================== */
+/*           RODAPÉ            */
+/* =========================== */
+
+footer{
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(to bottom, #0E3B40, #02515a);
+    display: flex;
+    justify-content: center;
+    gap: 25rem;
+}
+
+footer .contato, .local-redes{
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+footer .contato h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--cor-clara);
+}
+
+footer .contato ul{
+    margin-left: 16px;
+}
+
+footer .contato ul li::marker{
+    font-size: 1rem;
+    color: var(--cor-clara);
+}
+
+footer .contato ul li p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--cor-clara);
+    margin: 30px 0px;
+}
+
+footer .contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+textarea.mensagem {
+    height: 150px;
+    padding: 10px; /* adiciona espaço interno no topo */
+    resize: none;  /* opcional: impede redimensionamento */
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background-color: var(--cor-acao);
+    outline: none;
+    border-radius: 10px;
+}
+
+textarea.mensagem::placeholder{
+    color: var(--cor-secundaria);
+}
+
+
+footer .contato form button{
+    height: 37px;
+    border-radius: 10px;
+    background-color: var(--cor-acao);
+    color: var(--cor-secundaria);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    outline: none;
+    border: none;
+}
+
+footer .contato form button:hover {
+  transform: scale(1.05); /* dá uma leve aumentada */
+}
+
+footer .local-redes{
+    display: flex;
+    gap: 5rem;
+    padding-top: 15px;
+}
+
+footer .local-redes h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: var(--cor-clara);
+    margin-bottom: 10px;
+} 
+
+footer .local-redes address{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--cor-clara);
+}
+
+footer .local-redes .social-media .sociais{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+footer .local-redes .social-media .sociais img{
+    border-radius: 5px;
+}
+
+footer .local-redes .social-media .sociais img:hover{
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px var(--cor-acao);
+    background-color: #62efffd0;
+    transform: scale(1.1);
+}
