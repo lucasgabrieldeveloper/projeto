@@ -29,7 +29,7 @@
         <section class="hero_section" id="hero">
             <div class="texto-topo">
                 <h2>Ouça cada detalhe com clareza profissional</h2>
-                <p data-aos-delay="200">Headset x100 - Qualidade sonora que transforma a sua experiência</p>
+                <p>Headset x100 - Qualidade sonora que transforma a sua experiência</p>
                 <a href="#">comprar</a>
             </div>
             <img src="../imagens/imagem-topo.png" alt="imagem-topo" width="900px">
@@ -185,5 +185,27 @@
             </div>
         </div>
     </footer>
+<script>
+const elementos = document.querySelectorAll('.animado');
+
+function animarScroll() {
+    elementos.forEach(el => {
+        const topoElemento = el.getBoundingClientRect().top;
+        const alturaTela = window.innerHeight * 0.85;
+
+        if (topoElemento < alturaTela) {
+            el.classList.add('visivel');
+        } else {
+            el.classList.remove('visivel'); // Se quiser repetir a animação
+        }
+    });
+}
+
+window.addEventListener('scroll', animarScroll);
+window.addEventListener('load', animarScroll);
+</script>
+<script src="script.js"></script>
+
+
 </body>
 </html>

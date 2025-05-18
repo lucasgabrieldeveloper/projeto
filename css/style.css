@@ -208,7 +208,7 @@ section.hero_section .texto-topo a {
     text-decoration: none;
     color: var(--cor-principal);
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
@@ -279,7 +279,6 @@ section.categoria .container-cards .card {
     background: linear-gradient(to bottom, #026873, #0E3B40);
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section.categoria .container-cards .card h3 {
@@ -586,3 +585,25 @@ footer .local-redes .social-media .sociais img:hover {
     background-color: #62efffd0;
     transform: scale(1.1);
 }
+
+
+
+
+
+/* Começa invisível e deslocado pra baixo */
+.animado {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando entra na tela, aparece e sobe */
+.animado.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
