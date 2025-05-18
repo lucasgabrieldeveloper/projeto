@@ -19,6 +19,13 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
 
 /* =========================== */
 /*     VARIÁVEIS DE COR       */
@@ -303,6 +310,7 @@ section.categoria .container-cards .card p {
 section.categoria .container-cards .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
+    transition: 0.5s ease;
 }
 
 /* =========================== */
