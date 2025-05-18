@@ -585,25 +585,3 @@ footer .local-redes .social-media .sociais img:hover {
     background-color: #62efffd0;
     transform: scale(1.1);
 }
-
-
-
-
-
-/* Começa invisível e deslocado pra baixo */
-.animado {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-/* Quando entra na tela, aparece e sobe */
-.animado.visivel {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-1 { transition-delay: 0.2s; }
-.delay-2 { transition-delay: 0.4s; }
-.delay-3 { transition-delay: 0.6s; }
-

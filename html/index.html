@@ -185,27 +185,5 @@
             </div>
         </div>
     </footer>
-<script>
-const elementos = document.querySelectorAll('.animado');
-
-function animarScroll() {
-    elementos.forEach(el => {
-        const topoElemento = el.getBoundingClientRect().top;
-        const alturaTela = window.innerHeight * 0.85;
-
-        if (topoElemento < alturaTela) {
-            el.classList.add('visivel');
-        } else {
-            el.classList.remove('visivel'); // Se quiser repetir a animação
-        }
-    });
-}
-
-window.addEventListener('scroll', animarScroll);
-window.addEventListener('load', animarScroll);
-</script>
-<script src="script.js"></script>
-
-
 </body>
 </html>
