@@ -44,25 +44,15 @@ body {
 /* =========================== */
 header {
     height: 100px;
-    background: rgba(14, 59, 64, 0.25); /* Cor #0E3B40 com transparência */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border: 1px solid rgba(14, 59, 64, 0.4);
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    color: #fff;
-    box-sizing: border-box;
+    background-color: var(--cor-principal);
 }
 
 /* Estilo do título */
 header h1 {
     width: auto;
     height: 50px;
-    padding: 20px 0px 0px 25px;
+    padding: 10px 0px 0px 30px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: var(--cor-destaque);
@@ -84,6 +74,7 @@ header nav {
 /* Alinhamento horizontal do header e nav */
 header, nav > ul {
     display: flex;
+    align-items: center;
     gap: 170px;
 }
 
@@ -113,6 +104,29 @@ header nav ul li:hover {
 header nav ul li {
     color: var(--cor-destaque);
 }
+
+header nav ul a#contato{
+    display: inline-block;
+    text-align: center;
+    padding-top: 6px;
+    width: 108px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--cor-acao);
+    border: none;
+    color: #02515a;
+    font-family: "Poppins", sans-serif;
+}
+
+header nav ul a#contato:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px var(--cor-acao);
+    background-color: #62efffd0;
+}
+
+header nav ul a#contato
 
 /* Corrige cor ao visitar link */
 header nav ul li a:visited {
@@ -163,8 +177,7 @@ section.hero_section {
     width: 100%;
     min-height: 524px;
     background-color: var(--cor-principal);
-    display: flex;  
-    padding-top: 100px;
+    display: flex;
 }
 
 section.hero_section .texto-topo {
@@ -196,7 +209,7 @@ section.hero_section .texto-topo a {
     display: inline-block;
     text-align: center;
     padding-top: 7px;
-    width: 108px;
+    width: 130px;
     height: 40px;
     border-radius: 50px;
     background-color: var(--cor-acao);
@@ -548,6 +561,8 @@ footer .contato form button {
 footer .contato form button:hover {
     /* Efeito hover do botão */
     transform: scale(1.05);
+    box-shadow: 0 0 10px var(--cor-acao);
+    background-color: #62efffd0;
 }
 
 footer .local-redes {
