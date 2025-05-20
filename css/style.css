@@ -43,16 +43,17 @@ body {
 /*          HEADER            */
 /* =========================== */
 header {
-    height: 100px;
     width: 100%;
+    height: auto;
+    min-height: 80px;
     background-color: var(--cor-principal);
 }
 
 /* Estilo do título */
 header h1 {
     width: auto;
-    height: 50px;
-    padding: 10px 0px 0px 30px;
+    height: 3rem;
+    padding: 1rem 0rem 0rem 2rem;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: var(--cor-destaque);
@@ -68,19 +69,19 @@ header h1:hover {
 
 /* Estilo da navegação */
 header nav {
-    padding: 35px 0px 0px 0px;
+    padding: 3rem 0rem 0rem 0rem;
 }
 
 /* Alinhamento horizontal do header e nav */
 header, nav > ul {
     display: flex;
     align-items: center;
-    gap: 170px;
+    gap: 14rem;
 }
 
 /* Estilo da lista de links */
 header nav > ul {
-    gap: 120px;
+    gap: 8rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -109,8 +110,8 @@ header nav ul a#contato{
     display: inline-block;
     text-align: center;
     padding-top: 6px;
-    width: 108px;
-    height: 40px;
+    width: 7rem;
+    height: 2.5rem;
     border-radius: 50px;
     background-color: var(--cor-acao);
     border: none;
@@ -120,13 +121,10 @@ header nav ul a#contato{
 
 header nav ul a#contato:hover{
     transform: scale(1.1);
-    transition: 0.5s ease;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px var(--cor-acao);
     background-color: #62efffd0;
 }
-
-header nav ul a#contato
 
 /* Corrige cor ao visitar link */
 header nav ul li a:visited {
@@ -175,42 +173,44 @@ nav a:hover::after {
 /* =========================== */
 section.hero_section {
     width: 100%;
+    height: auto;
     min-height: 524px;
     background-color: var(--cor-principal);
     display: flex;
+    padding-top: 0.5rem;
 }
 
 section.hero_section .texto-topo {
     width: 50%;
     height: 100%;
-    padding-left: 150px;
-    padding-top: 90px;
+    padding-left: 14rem;
+    padding-top: 5rem;
 }
 
 section.hero_section .texto-topo h2 {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 49px;
-    width: 300px;
+    font-size: 3rem;
+    width: 22rem;
     color: var(--cor-clara);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
 }
 
 section.hero_section .texto-topo p {
-    width: 300px;
+    width: 22rem;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    font-size: 13px;
+    font-size: 1rem;
     color: var(--cor-clara);
-    margin: 20px 0px;
+    margin: 2rem 0rem;
 }
 
 section.hero_section .texto-topo a {
     display: inline-block;
     text-align: center;
     padding-top: 7px;
-    width: 130px;
-    height: 40px;
+    width: 7rem;
+    height: 2.5rem;
     border-radius: 50px;
     background-color: var(--cor-acao);
     border: none;
@@ -218,7 +218,6 @@ section.hero_section .texto-topo a {
 
 section.hero_section .texto-topo a:hover{
     transform: scale(1.1);
-    transition: 0.5s ease;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px var(--cor-acao);
     background-color: #62efffd0;
@@ -231,13 +230,19 @@ section.hero_section .texto-topo a {
     font-weight: 500;
 }
 
+section.hero_section img{
+    width: 100%;
+    max-width: 900px;
+    height: auto; 
+}
+
 
 /* =========================== */
 /*        DESTAQUES           */
 /* =========================== */
 section.destaques {
     width: 100%;
-    height: 60px;
+    height: 3.60rem;
     display: flex;
     justify-content: space-around;
     background-color: var(--cor-secundaria);
@@ -245,22 +250,28 @@ section.destaques {
 }
 
 section.destaques div {
-    width: 220px;
-    height: 60px;
+    width: 13rem;
+    height: 3.60rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    transition: transform 0.4s ease;
 }
 
 section.destaques div img {
-    width: 42px;
+    width: 2.5rem;
+    height: auto;
 }
 
 section.destaques div p {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--cor-clara);
+}
+
+section.destaques div:hover{
+    transform: scale(1.05);
 }
 
 
@@ -269,6 +280,7 @@ section.destaques div p {
 /* =========================== */
 section.categoria {
     width: 100%;
+    height: auto;
     min-height: 550px;
     display: flex;
     flex-direction: column;
@@ -278,52 +290,52 @@ section.categoria {
 
 section.categoria h2 {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: var(--cor-destaque);
-    margin: 35px 0px;
+    margin: 2rem 0rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
 }
 
 section.categoria .container-cards {
     display: flex;
-    gap: 125px;
+    gap: 10rem;
 }
 
 section.categoria .container-cards .card {
-    width: 230px;
-    height: 300px;
+    width: 15rem;
+    height: 19.50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to bottom, #026873, #0E3B40);
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
 }
 
 section.categoria .container-cards .card h3 {
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
     color: var(--cor-acao);
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 
 }
 
 section.categoria .container-cards .card p {
-    width: 200px;
+    width: 13rem;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 0.82rem;
     color: var(--cor-clara);
     text-align: center;
 }
 
 /* Efeito hover nos cards */
 section.categoria .container-cards .card:hover {
-    transform: translateY(-4px);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
-    transition: 0.5s ease;
+    transform: scale(1.05);
 }
 
 /* =========================== */
@@ -332,6 +344,7 @@ section.categoria .container-cards .card:hover {
 section.depoimentos{
     width: 100%;
     height: auto;
+    min-height: 700px;
     background: linear-gradient(to bottom, #0E3B40, #026873);
 }
 
@@ -355,10 +368,10 @@ section.depoimentos .container-img-texto .headset-img:hover {
 section.depoimentos .container-img-texto .texto .txt h2{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 2rem;
     color: var(--cor-destaque);
-    width: 330px;
-    margin-bottom: 20px;
+    width: 20.6rem;
+    margin-bottom: 1.25rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
@@ -376,13 +389,13 @@ section.depoimentos .container-img-texto .texto #caracteristica{
 section.depoimentos .container-img-texto .texto #caracteristica p{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 0.85rem;
     color: var(--cor-clara);
-    margin-bottom: 10px;
+    margin-bottom: 0.55rem;
 }
 
 section.depoimentos .container-img-texto .texto{
-    margin: 90px;
+    margin: 5.6rem;
 }
 
 section.depoimentos .container-img-texto .texto #caracteristica #negrito{
@@ -390,7 +403,7 @@ section.depoimentos .container-img-texto .texto #caracteristica #negrito{
 }
 
 section.depoimentos .container-img-texto .texto #caracteristica img{
-    margin-bottom: 10px;
+    margin-bottom: 0.55rem;
 }
 
 section.depoimentos .container-img-texto .texto .estrela{
@@ -399,8 +412,7 @@ section.depoimentos .container-img-texto .texto .estrela{
 
 section.depoimentos .container-img-texto .texto .position-absolute ul{
     position: absolute;
-    margin-bottom: 50px;
-    margin-left: 20px;
+    margin: 0rem 0rem 3.1rem 1.25rem;
 }
 
 section.depoimentos .container-img-texto .texto .position-absolute ul li::marker{
@@ -410,7 +422,8 @@ section.depoimentos .container-img-texto .texto .position-absolute ul li::marker
 
 section.depoimentos .container-depoimentos{
     width: 100%;
-    height: 280px;
+    height: auto;
+    min-height: 280px;
     background-color: var(--cor-secundaria);
     display: flex;
     flex-direction: column;
@@ -420,33 +433,31 @@ section.depoimentos .container-depoimentos{
 section.depoimentos .container-depoimentos h3{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.56rem;
     color: #6FE3F3;
-    margin: 10px 0px;
+    margin: 0.6rem 0rem;
 }
 
 section.depoimentos .container-depoimentos .depoimentos-nomes{
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
+    margin-top: 1.20rem;
 }
 
 section.depoimentos .container-depoimentos .depoimentos-nomes div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    height: 150px;
-    background: rgba(0, 118, 122, 0.13); /* fundo branco com transparência */
+    width: 19rem;
+    height: 9.3rem;
+    background: rgba(9, 117, 117, 0.204); /* fundo branco com transparência */
     border-radius: 16px;
     backdrop-filter: blur(10px); /* o efeito vidro mesmo! */
     -webkit-backdrop-filter: blur(10px); /* compatibilidade */
     border: 1px solid rgba(255, 255, 255, 0.2); /* contorno suave */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* profundidade */
-}
-
-section.depoimentos .container-depoimentos .depoimentos-nomes div {
     transition: transform 0.4s ease;
 }
 
@@ -457,14 +468,14 @@ section.depoimentos .container-depoimentos .depoimentos-nomes div:hover {
 section.depoimentos .container-depoimentos .depoimentos-nomes div p{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: var(--cor-clara);
 }
 
 section.depoimentos .container-depoimentos .depoimentos-nomes div ul li p{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.8rem;
     color: var(--cor-clara);
 }
 
@@ -480,6 +491,7 @@ section.depoimentos .container-depoimentos .depoimentos-nomes div ul li::marker{
 footer {
     /* Container geral do rodapé */
     width: 100%;
+    height: auto;
     min-height: 450px;
     background: linear-gradient(to bottom, #0E3B40, #02515a);
     display: flex;
@@ -489,21 +501,21 @@ footer {
 
 footer .contato, .local-redes {
     /* Estilos das duas colunas do rodapé */
-    width: 400px;
-    height: 400px;
-    margin-top: 50px;
+    width: 25rem;
+    height: 25rem;
+    margin-top: 3.1rem;
 }
 
 footer .contato h2 {
     /* Título da área de contato */
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 2rem;
     color: var(--cor-clara);
 }
 
 footer .contato ul {
-    margin-left: 16px;
+    margin-left: 1rem;
 }
 
 footer .contato ul li::marker {
@@ -516,9 +528,9 @@ footer .contato ul li p {
     /* Texto do item de contato */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1rem;
     color: var(--cor-clara);
-    margin: 30px 0px;
+    margin: 1.90rem 0rem;
 }
 
 footer .contato form {
@@ -531,11 +543,11 @@ footer .contato form {
 
 textarea.mensagem {
     /* Caixa de texto da mensagem */
-    height: 150px;
-    padding: 10px;
+    height: 9.3rem;
+    padding: 0.6rem;
     resize: none;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 0.90rem;
     background-color: var(--cor-acao);
     outline: none;
     border-radius: 10px;
@@ -548,7 +560,7 @@ textarea.mensagem::placeholder {
 
 footer .contato form button {
     /* Botão de enviar */
-    height: 37px;
+    height: 2.5rem;
     border-radius: 10px;
     background-color: var(--cor-acao);
     color: var(--cor-secundaria);
@@ -556,6 +568,7 @@ footer .contato form button {
     transition: transform 0.3s ease;
     outline: none;
     border: none;
+    font-weight: 600;
 }
 
 footer .contato form button:hover {
@@ -569,23 +582,23 @@ footer .local-redes {
     /* Coluna direita do rodapé (endereços + redes sociais) */
     display: flex;
     gap: 5rem;
-    padding-top: 15px;
+    padding-top: 1rem;
 }
 
 footer .local-redes h3 {
     /* Subtítulo (opcional, se tiver) */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 19px;
+    font-size: 1.3rem;
     color: var(--cor-clara);
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
 }
 
 footer .local-redes address {
     /* Endereço de localização */
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 0.75rem;
     color: var(--cor-clara);
 }
 
@@ -593,7 +606,7 @@ footer .local-redes .social-media .sociais {
     /* Agrupamento dos ícones sociais */
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 0.30rem;
 }
 
 footer .local-redes .social-media .sociais img {
